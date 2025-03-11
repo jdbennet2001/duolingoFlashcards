@@ -20,11 +20,23 @@
         "Good evening": "Selamat malam",
         "How are you?": "Apa kabar?",
         "I am fine": "Saya baik",
-        "Thank you": "Terima kasih",
         "You're welcome": "Sama-sama",
         "Yes": "Ya",
         "No": "Tidak",
-        "Please": "Tolong",
-        "Excuse me": "Permisi"
+        "Excuse me": "Permisi",
+
+        "apple": "apel",
+        "the" : "itu",
+        "I" : "saya",
+        "you" : "kamu",
+        "she" : "dia",
+        "strong" : "kuat",
+        "orange" : "jeruk",
+        "red" : "merah" ,
+        "putih" : "white",
+        "black": "hitam",
+        "milk" : "susu",
+        "and" : "dan"
+        
     }
 }

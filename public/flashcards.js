@@ -1,7 +1,33 @@
+/*
+ Simple priority queue, ensuring that missed keys are given priority
+ */
+ class PriorityQueue {
+
+    keys = [];
+
+    constructor(words) {
+        this.keys = words;
+    }
+
+    miss(key){
+        this.keys.push(key);
+    }
+
+    next(){
+        return _.sample(this.keys);
+    }
+
+}
+
+let queue = null;
+
+
 $(document).ready(function () {
     $.getJSON('flashcards.json', function (data) {
         const wordMap = data.flashcards;
         const words = Object.keys(wordMap);
+        queue = new PriorityQueue(words);
+
         let currentWord = '';
 
         function getRandomChoices(correctWord) {
@@ -18,7 +44,7 @@ $(document).ready(function () {
         }
 
         function generateFlashcard() {
-            currentWord = words[Math.floor(Math.random() * words.length)];
+            currentWord = queue.next()
             const choices = getRandomChoices(currentWord);
 
             let htmlContent = `<div class='flashcard'>
@@ -50,6 +76,7 @@ $(document).ready(function () {
                 speakText(selectedChoice); // Speak the selected word
                 setTimeout(generateFlashcard, 1500);
             } else {
+                queue.miss(currentWord);
                 $('.choices').html(`<li class='correct-answer'>${wordMap[currentWord]}</li>`);
                 speakText(wordMap[currentWord]); // Speak the correct answer when revealed
             }
