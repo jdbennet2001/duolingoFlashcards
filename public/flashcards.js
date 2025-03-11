@@ -18,7 +18,7 @@
     }
 
     hit(key){
-        this.words[key] = Math.max(this.words[key]-1, 1)
+        this.words[key] = Math.max(this.words[key]-0.33, 1)
     }
 
     next(){

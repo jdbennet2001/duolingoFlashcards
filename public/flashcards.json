@@ -36,7 +36,11 @@
         "white" : "putih",
         "black": "hitam",
         "milk" : "susu",
-        "and" : "dan"
+        "and" : "dan",
+
+
+        "How's your day?" : "Gimana harimu",
+        "Hi beautiful" : "hai cantik"
         
     }
 }
