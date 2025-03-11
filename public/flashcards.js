@@ -4,6 +4,7 @@
  class PriorityQueue {
 
     keys = [];
+    history = [];
 
     constructor(words) {
         this.keys = words;
@@ -11,6 +12,10 @@
 
     miss(key){
         this.keys.push(key);
+    }
+
+    hit(key){
+        return
     }
 
     next(){
@@ -72,6 +77,7 @@ $(document).ready(function () {
             const selectedChoice = $(this).text();
             
             if (selectedChoice === wordMap[currentWord]) {
+                queue.hit(currentWord)
                 $(this).css('background', 'green');
                 speakText(selectedChoice); // Speak the selected word
                 setTimeout(generateFlashcard, 1500);
