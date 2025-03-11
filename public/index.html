@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="flashcards.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $.getJSON('flashcards.json', function(data) {
+                let flashcardsHtml = '';
+                data.flashcards.forEach(function(card) {
+                    flashcardsHtml += `<div class='flashcard'><h3>${card.question}</h3><p>${card.answer}</p></div>`;
+                });
+                $('#flashcards').html(flashcardsHtml);
+            }).fail(function() {
+                console.error("Failed to load flashcards.json");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Flashcards</h1>
+        <div id="flashcards"></div>
+    </div>
+</body>
+</html>
