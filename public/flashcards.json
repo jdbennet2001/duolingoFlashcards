@@ -14,7 +14,7 @@
         "drink": "minum",
         "hungry": "lapar",
         "thirsty": "haus",
-        "Hello": "Halo",
+       
         "Good morning": "Selamat pagi",
         "Good afternoon": "Selamat sore",
         "Good evening": "Selamat malam",
@@ -33,7 +33,7 @@
         "strong" : "kuat",
         "orange" : "jeruk",
         "red" : "merah" ,
-        "putih" : "white",
+        "white" : "putih",
         "black": "hitam",
         "milk" : "susu",
         "and" : "dan"

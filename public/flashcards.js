@@ -3,23 +3,45 @@
  */
  class PriorityQueue {
 
-    keys = [];
-    history = [];
+    words = {}
 
     constructor(words) {
-        this.keys = words;
+
+        _.forEach(words, (word) => {
+            this.words[word] = 1;
+        })
+        
     }
 
     miss(key){
-        this.keys.push(key);
+        this.words[key] = this.words[key] + 1
     }
 
     hit(key){
-        return
+        this.words[key] = Math.max(this.words[key]-1, 1)
     }
 
     next(){
-        return _.sample(this.keys);
+
+        let answer = null;
+
+        // Find (weighted) answer
+        let sum = 0;
+        _.forEach( this.words, (val, key) => {
+            sum += val
+        })
+
+        var random = Math.random() * sum;
+
+        _.forEach( this.words, (val, key) => {
+            random = random - val;
+            if (random <= 0 && answer === null)
+                return answer = key
+        })
+
+        return answer;
+
+  
     }
 
 }
