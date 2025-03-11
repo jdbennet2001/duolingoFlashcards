@@ -27,19 +27,7 @@
             justify-content: center;
         }
     </style>
-    <script>
-        $(document).ready(function() {
-            $.getJSON('flashcards.json', function(data) {
-                let flashcardsHtml = '';
-                data.flashcards.forEach(function(card) {
-                    flashcardsHtml += `<div class='flashcard'><h3>${card.question}</h3><p>${card.answer}</p></div>`;
-                });
-                $('#flashcards').html(flashcardsHtml);
-            }).fail(function() {
-                console.error("Failed to load flashcards.json");
-            });
-        });
-    </script>
+
 </head>
 <body>
     <div class="container">
@@ -47,4 +35,6 @@
         <div id="flashcards"></div>
     </div>
 </body>
+<script src="flashcards.js"></script>
+
 </html>
