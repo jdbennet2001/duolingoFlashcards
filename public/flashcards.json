@@ -40,7 +40,19 @@
 
 
         "How's your day?" : "Gimana harimu",
-        "Hi beautiful" : "hai cantik"
+        "Hi beautiful" : "hai cantik",
+     
         
+        "cat" : "kucing",
+        "have" : "punya",
+        "like" : "suka",
+        "want" : "mau",
+
+        "names" : "nama",
+        "who" : "siapa",
+        
+        
+
+
     }
 }
