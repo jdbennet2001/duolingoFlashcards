@@ -50,7 +50,7 @@ let queue = null;
 
 
 $(document).ready(function () {
-    $.getJSON('flashcards.json', function (data) {
+    $.getJSON('flashcards.json?nocache=' + Math.random(), function (data) {
         const wordMap = data.flashcards;
         const words = Object.keys(wordMap);
         queue = new PriorityQueue(words);
