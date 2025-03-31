@@ -1,5 +1,5 @@
 {
-    "flashcards": {
+    "lesson 01": {
         "hello": "halo",
         "goodbye": "selamat tinggal",
         "please": "tolong",
@@ -51,8 +51,14 @@
         "names" : "nama",
         "who" : "siapa"
 
-        
+    },
 
-
+    "flashcards" : {
+        "how many" : "berapa",
+        "how old" : "umar",
+        "years" : "tahun",
+        "where" : "mana",
+        "negative" : "bukan",
+        "who" : "siapa"
     }
 }
