@@ -55,12 +55,12 @@
 
     "flashcards" : {
         "how many" : "berapa",
-	"what" : siapa,
+	    "what" : "siapa",
         "how old" : "umur",
         "years" : "tahun",
         "where" : "mana",
         "negative" : "bukan",
         "who" : "siapa",
-	"from" : "dari"
+	    "from" : "dari"
     }
 }
