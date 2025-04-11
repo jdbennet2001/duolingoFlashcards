@@ -53,7 +53,7 @@
 
     },
 
-    "flashcards" : {
+    "lesson 02 - introducing yourself" : {
         "how many" : "berapa",
         "how old" : "umur",
         "years" : "tahun",
@@ -61,5 +61,13 @@
         "negative" : "bukan",
         "who" : "siapa",
 	    "from" : "dari"
+    },
+
+    "flashcards" : {
+        "letter" : "surat",
+        "writing" : "menulis",
+        "I" : "aku",
+        "book" : "buku",
+        "we" : "kita"
     }
 }
