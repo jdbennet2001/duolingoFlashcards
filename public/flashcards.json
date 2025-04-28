@@ -1,4 +1,6 @@
 {
+    "lessons" : ["lesson 01", "lesson 03"],
+
     "lesson 01": {
         "hello": "halo",
         "goodbye": "selamat tinggal",
@@ -63,7 +65,7 @@
 	    "from" : "dari"
     },
 
-    "flashcards" : {
+    "lesson 03" : {
         "letter" : "surat",
         "writing" : "menulis",
         "I" : "aku",

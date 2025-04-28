@@ -51,7 +51,7 @@ let queue = null;
 
 $(document).ready(function () {
     $.getJSON('flashcards.json?nocache=' + Math.random(), function (data) {
-        const wordMap = data.flashcards;
+        const wordMap = questions(data);
         const words = Object.keys(wordMap);
         queue = new PriorityQueue(words);
 
@@ -68,6 +68,19 @@ $(document).ready(function () {
                 }
             }
             return _.shuffle(choices);
+        }
+
+        function questions(data) {
+
+            let result = {}
+
+            const lessons = data.lessons
+
+            _.forEach(lessons, (lesson) => {
+                result = _.merge(result, data[lesson])
+            })
+            return result
+
         }
 
         function generateFlashcard() {
